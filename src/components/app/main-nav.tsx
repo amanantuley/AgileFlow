@@ -31,7 +31,7 @@ export function MainNav() {
     <nav className="flex flex-col">
       <SidebarMenu>
         {navItems.map((item) => (
-          <SidebarMenuItem key={item.href}>
+          <SidebarMenuItem key={`${item.href}-${item.label}`}>
             <Link href={item.href} legacyBehavior passHref>
               <SidebarMenuButton
                 className={cn(
