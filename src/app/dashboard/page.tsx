@@ -1,5 +1,6 @@
 import { KanbanBoard } from '@/components/kanban/board';
 import { tasks, statuses } from '@/lib/data';
+import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area';
 
 export default function DashboardPage() {
   const tasksByStatus = statuses.map((status) => ({
@@ -8,8 +9,9 @@ export default function DashboardPage() {
   }));
 
   return (
-    <div className="h-full w-full">
+    <ScrollArea className="h-full w-full">
       <KanbanBoard columns={tasksByStatus} />
-    </div>
+      <ScrollBar orientation="horizontal" />
+    </ScrollArea>
   );
 }

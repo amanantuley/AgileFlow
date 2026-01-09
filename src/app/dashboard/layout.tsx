@@ -36,11 +36,11 @@ export default function DashboardLayout({
         </Sidebar>
 
         <SidebarInset className="flex flex-1 flex-col">
-          <header className="sticky top-0 z-10 flex h-16 items-center gap-4 border-b bg-background/80 px-4 backdrop-blur-sm md:px-6">
+          <header className="sticky top-0 z-10 flex h-16 items-center gap-2 border-b bg-background/80 px-4 backdrop-blur-sm sm:gap-4 md:px-6">
             <SidebarTrigger className="md:hidden" />
-            <div className="flex w-full items-center gap-4">
+            <div className="flex w-full items-center gap-2 sm:gap-4">
               <Select defaultValue="proj-1">
-                <SelectTrigger className="w-full max-w-[200px] font-semibold">
+                <SelectTrigger className="w-full max-w-[140px] truncate font-semibold sm:max-w-[200px]">
                   <SelectValue placeholder="Select project" />
                 </SelectTrigger>
                 <SelectContent>
@@ -53,7 +53,7 @@ export default function DashboardLayout({
                 <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
                 <Input
                   type="search"
-                  placeholder="Search tasks..."
+                  placeholder="Search..."
                   className="w-full rounded-lg bg-muted pl-8 md:w-[200px] lg:w-[320px]"
                 />
               </div>
@@ -65,7 +65,7 @@ export default function DashboardLayout({
               <UserNav />
             </div>
           </header>
-          <main className="flex-1 overflow-auto">{children}</main>
+          <main className="flex flex-1 flex-col overflow-hidden">{children}</main>
         </SidebarInset>
       </div>
     </SidebarProvider>
