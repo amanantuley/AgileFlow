@@ -38,7 +38,7 @@ export default function DashboardLayout({
         <SidebarInset className="flex flex-1 flex-col">
           <header className="sticky top-0 z-10 flex h-16 items-center gap-2 border-b bg-background/80 px-4 backdrop-blur-sm sm:gap-4 md:px-6">
             <SidebarTrigger className="md:hidden" />
-            <div className="flex w-full items-center gap-2 sm:gap-4">
+            <div className="hidden md:flex md:w-full md:items-center md:gap-2 sm:gap-4">
               <Select defaultValue="proj-1">
                 <SelectTrigger className="w-full max-w-[140px] truncate font-semibold sm:max-w-[200px]">
                   <SelectValue placeholder="Select project" />
@@ -57,12 +57,14 @@ export default function DashboardLayout({
                   className="w-full rounded-lg bg-muted pl-8 md:w-[200px] lg:w-[320px]"
                 />
               </div>
-              <ThemeToggle />
-              <Button variant="ghost" size="icon" className="rounded-full">
-                <Bell className="h-5 w-5" />
-                <span className="sr-only">Toggle notifications</span>
-              </Button>
-              <UserNav />
+            </div>
+            <div className="flex flex-1 items-center justify-end gap-2">
+                <ThemeToggle />
+                <Button variant="ghost" size="icon" className="rounded-full">
+                    <Bell className="h-5 w-5" />
+                    <span className="sr-only">Toggle notifications</span>
+                </Button>
+                <UserNav />
             </div>
           </header>
           <main className="flex flex-1 flex-col overflow-hidden">{children}</main>

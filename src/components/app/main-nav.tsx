@@ -16,12 +16,12 @@ import { cn } from '@/lib/utils';
 
 const navItems = [
   { href: '/dashboard', icon: LayoutDashboard, label: 'Dashboard' },
-  { href: '#', icon: Package, label: 'Projects' },
-  { href: '#', icon: KanbanSquare, label: 'Kanban' },
-  { href: '#', icon: ListTodo, label: 'Backlog' },
-  { href: '#', icon: Bug, label: 'Bugs' },
-  { href: '#', icon: LineChart, label: 'Reports' },
-  { href: '#', icon: Settings, label: 'Settings' },
+  { href: '/projects', icon: Package, label: 'Projects' },
+  { href: '/kanban', icon: KanbanSquare, label: 'Kanban' },
+  { href: '/backlog', icon: ListTodo, label: 'Backlog' },
+  { href: '/bugs', icon: Bug, label: 'Bugs' },
+  { href: '/reports', icon: LineChart, label: 'Reports' },
+  { href: '/settings', icon: Settings, label: 'Settings' },
 ];
 
 export function MainNav() {
